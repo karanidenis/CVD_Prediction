@@ -91,7 +91,7 @@ function App() {
 
       console.log('Data being sent:', processedData);
 
-      const response = await fetch('http://127.0.0.1:5000/confirm-input', {
+      const response = await fetch('http://127.0.0.1:8080/confirm-input', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -123,59 +123,7 @@ function App() {
   
 // const handleSubmit = async (e) => {
 //   e.preventDefault();
-
-//   try {
-//     // Call handleConfirmInput to preprocess data
-//     await handleConfirmInput();
-
-//     // Use preprocessed data
-//     const data = preprocessData({
-//       age,
-//       height,
-//       weight,
-//       gender,
-//       alco,
-//       smoke,
-//       ap_hi,
-//       ap_lo,
-//       active,
-//       gluc,
-//       cholesterol,
-//     });
-
-//     // Log data before sending the request
-//     console.log('Data being sent:', data);
-
-//     setIsLoading(true); // Set loading state while waiting for response
-
-//     const response = await fetch('http://127.0.0.1:5000/predict', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify(data)
-//     });
-
-//     setIsLoading(false); // Reset loading state after response received
-
-//     console.log(await response.text()); // Log the response body
-
-//     if (response.ok) {
-//       const prediction = await response.json();
-//       setResult(prediction.result);
-//       console.log(prediction.result);
-//     } else {
-//       // Display error message
-//       console.error('Error:', response.statusText);
-//       setResult('');
-//     }
-//   } catch (error) {
-//     // Display error message
-//     console.error('Error:', error);
-//     setResult('');
-//     setIsLoading(false); // Reset loading state in case of error
-//   }
-// };
+ 
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -204,7 +152,7 @@ const handleSubmit = async (e) => {
 
     setIsLoading(true); // Set loading state while waiting for response
 
-    const response = await fetch('http://127.0.0.1:5000/predict', {
+    const response = await fetch('http://127.0.0.1:8080/predict', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
