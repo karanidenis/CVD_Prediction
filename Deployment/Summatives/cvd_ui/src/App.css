@@ -1,0 +1,40 @@
+/* App.css */
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.label,
+.select,
+.input {
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
