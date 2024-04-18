@@ -1,1 +1,6 @@
 tensorflow
+flask
+flask_cors
+joblib
+numpy
+pandas
